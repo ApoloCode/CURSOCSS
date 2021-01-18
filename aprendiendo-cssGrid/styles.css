@@ -1,0 +1,68 @@
+body {
+    text-align: center;
+    font-family: sans-serif;
+}
+
+.layout {
+    width: 80%;
+    min-height: 600px;
+    margin: 0px auto;
+    border: 3px solid orangered;
+    /* Definir el grid layout */
+    display: grid;
+    /* Tamaño y cuantas columnas */
+    /* grid-template-columns: repeat(2, calc(25% - 10px)) 15% 35%; */
+    grid-template-columns: repeat(3, 1fr);
+    /* Tamaño y cuantas filas */
+    grid-template-rows: repeat(2, 1fr) 3fr repeat(2, 1fr);
+    /* Espacio entre elementos grid */
+    grid-gap: 10px;
+    padding: 10px;
+}
+
+.layout .caja {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    padding: 20px;
+    border: 4px solid #222;
+    background-color: gray;
+}
+
+.layout .red {
+    background-color: red;
+    /* Expandir columnas desde el inicio al final */
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+.layout .green {
+    background-color: green;
+    grid-row-start: 2;
+    grid-row-end: 6;
+}
+
+.layout .blue {
+    background-color: blue;
+    grid-column: 2 / 4;
+}
+
+.layout .pink {
+    background-color: palevioletred;
+    grid-column: 2 / 3;
+    grid-row: 3 / 5;
+}
+
+.layout .orange {
+    background-color: orange;
+    grid-row: 3 / 5;
+}
+
+.layout .lightblue {
+    background-color: lightblue;
+    /*
+    grid-column-start: 1;
+    grid-column-end: 3; */
+    /* Lo misco que con grid-column-start/end */
+    grid-column: 2 / 4;
+}
